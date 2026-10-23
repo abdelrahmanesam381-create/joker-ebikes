@@ -46,7 +46,7 @@ export async function ModelDetails({ params }: Pick<PageProps<"/models/[slug]">,
 
           <div className="flex flex-wrap gap-5 pt-2">
             <AddToCartButton slug={model.slug} />
-            <ButtonLink href="/test-ride" variant="paper" size="lg">Book a test ride</ButtonLink>
+            <ButtonLink href={`/test-ride?model=${model.slug}`} variant="paper" size="lg">Book a test ride</ButtonLink>
           </div>
         </div>
       </div>

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useCart, cartCount, MAX_QTY } from "@/store/cart";
 import { getModel, formatEgp } from "@/data/models";
-import { Button } from "@/components/ui/Button";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 
 const HELMET_THRESHOLD = 50000; // free helmet above this subtotal
@@ -128,8 +127,7 @@ export function CartDrawer() {
                     <span className="font-display text-2xl">{formatEgp(subtotal)}</span>
                   </div>
                   <p className="text-xs">Delivery in Cairo included. Charged in EGP.</p>
-                  {/* Real checkout arrives in step 10 */}
-                  <Button size="lg" disabled title="Checkout arrives in step 10">Checkout</Button>
+                  <ButtonLink href="/checkout" size="lg" onClick={close}>Checkout</ButtonLink>
                 </footer>
               </>
             )}
