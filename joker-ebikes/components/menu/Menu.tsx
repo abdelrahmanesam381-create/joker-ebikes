@@ -64,7 +64,7 @@ export function Menu() {
             transition={{ type: "tween", ease: [0.7, 0, 0.3, 1], duration: 0.45 }}
           >
             <div className="flex items-center justify-between border-b-[3px] border-ink px-4 py-3 md:px-8">
-              <Logo onClick={close} />
+              <Logo onClick={close} variant="sticker" />
               <button
                 ref={closeRef}
                 type="button"
@@ -117,9 +117,9 @@ export function Menu() {
                         className="block border-[3px] border-ink bg-paper shadow-hard transition-transform hover:-translate-y-1 hover:-rotate-1 focus-visible:outline-4 focus-visible:outline-joker"
                       >
                         <ProductPhoto model={m} sizes="220px" className="border-b-[3px] border-ink" />
-                        <span className="flex items-center justify-between gap-2 p-3">
+                        <span className="flex flex-col items-start gap-0.5 p-3 lg:flex-row lg:items-center lg:justify-between lg:gap-2">
                           <span className="font-display uppercase">{m.name}</span>
-                          <span className="text-xs font-bold">{formatEgp(m.priceEgp)}</span>
+                          <span className="whitespace-nowrap text-xs font-bold">{formatEgp(m.priceEgp)}</span>
                         </span>
                       </Link>
                     </motion.div>

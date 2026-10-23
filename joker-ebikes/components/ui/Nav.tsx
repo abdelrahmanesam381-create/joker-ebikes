@@ -14,7 +14,7 @@ export function Nav() {
 
       {/* Center: logo on phones, logo + quick links on larger screens */}
       <div className="flex items-center gap-10">
-        <Logo />
+        <Logo priority />
         <nav aria-label="Main" className="hidden gap-8 lg:flex">
           {mainLinks.slice(1).map((l) => (
             <Link

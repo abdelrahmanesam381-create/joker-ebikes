@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/ui/Logo";
 
 const columns = [
   { title: "Shop", links: [{ href: "/models", label: "All bikes" }, { href: "/pick", label: "Pick your card" }, { href: "/test-ride", label: "Test ride" }] },
@@ -10,8 +11,8 @@ export function Footer() {
     <footer className="bg-signal text-ink">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-14 md:grid-cols-[2fr_1fr_1fr] md:px-8">
         <div>
-          <p className="font-display text-6xl uppercase md:text-8xl">Joker</p>
-          <p className="mt-2 max-w-xs text-sm">Urban e-bikes for people who ride the city every day.</p>
+          <Logo variant="sticker" size="lg" />
+          <p className="mt-6 max-w-xs text-sm">Urban e-bikes for people who ride the city every day.</p>
         </div>
         {columns.map((c) => (
           <div key={c.title}>
