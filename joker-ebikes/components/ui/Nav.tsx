@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Badge } from "./Badge";
+import { CartButton } from "@/components/cart/CartButton";
 
 const links = [
   { href: "/models", label: "Bikes" },
@@ -7,7 +7,7 @@ const links = [
   { href: "/test-ride", label: "Test ride" },
 ];
 
-export function Nav({ cartCount = 0 }: { cartCount?: number }) {
+export function Nav() {
   return (
     <header className="sticky top-0 z-40 flex items-center justify-between border-b-[3px] border-ink bg-paper px-4 py-3 md:px-8">
       <Link href="/" className="flex items-center gap-2 font-display text-2xl uppercase">
@@ -28,13 +28,7 @@ export function Nav({ cartCount = 0 }: { cartCount?: number }) {
         ))}
       </nav>
 
-      <button
-        type="button"
-        className="flex items-center gap-2 border-[3px] border-ink bg-signal px-3 py-1.5 font-display uppercase shadow-[3px_3px_0_#111111] cursor-pointer enabled:hover:translate-x-0.5 enabled:hover:translate-y-0.5 enabled:hover:shadow-none focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-joker"
-        aria-label={`Open cart, ${cartCount} items`}
-      >
-        Cart <Badge tone="ink">{cartCount}</Badge>
-      </button>
+      <CartButton />
     </header>
   );
 }

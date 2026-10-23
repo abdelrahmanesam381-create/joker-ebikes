@@ -28,3 +28,9 @@ body {
   color: var(--color-ink);
   font-family: var(--font-mono);
 }
+
+/* Keep space for the scrollbar, so the page doesn't jump sideways
+   when the cart drawer locks scrolling */
+html {
+  scrollbar-gutter: stable;
+}

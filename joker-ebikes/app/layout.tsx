@@ -3,6 +3,7 @@ import { Archivo_Black, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/ui/Nav";
 import { Footer } from "@/components/Footer";
+import { CartDrawer } from "@/components/cart/CartDrawer";
 
 const archivo = Archivo_Black({
   variable: "--font-archivo",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Nav />
         {children}
         <Footer />
+        <CartDrawer />
       </body>
     </html>
   );
