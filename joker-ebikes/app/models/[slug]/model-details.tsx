@@ -24,7 +24,7 @@ export async function ModelDetails({ params }: Pick<PageProps<"/models/[slug]">,
       </nav>
 
       <div className="grid gap-12 md:grid-cols-2">
-        <Showcase accent={model.accent} />
+        <Showcase model={model} />
 
         <div className="flex flex-col items-start gap-6">
           <Sticker tone="joker">Urban e-bike</Sticker>

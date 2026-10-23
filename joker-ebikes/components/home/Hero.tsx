@@ -1,4 +1,4 @@
-import { BikeArt } from "@/components/BikeArt";
+import { ProductPhoto } from "@/components/ProductPhoto";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Card } from "@/components/ui/Card";
 import { Sticker } from "@/components/ui/Sticker";
@@ -29,7 +29,7 @@ export function Hero() {
         <Sticker tone="paper" className="absolute -top-5 -left-4">
           From {formatEgp(king.priceEgp)}
         </Sticker>
-        <BikeArt accent={king.accent} className="w-full" />
+        <ProductPhoto model={king} priority sizes="(min-width: 768px) 45vw, 100vw" className="border-[3px] border-ink" />
         <div className="mt-4 flex items-end justify-between gap-4">
           <div>
             <p className="font-display text-4xl uppercase">{king.name}</p>

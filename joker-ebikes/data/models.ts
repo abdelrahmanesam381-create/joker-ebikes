@@ -28,7 +28,7 @@ export const models: Model[] = [
     cargo: 1,
     weatherProof: 1,
     reliability: 2,
-    image: "/bikes/ace.png",
+    image: "/bikes/ace.webp",
   },
   {
     slug: "jack",
@@ -41,7 +41,7 @@ export const models: Model[] = [
     cargo: 3,
     weatherProof: 2,
     reliability: 2,
-    image: "/bikes/jack.png",
+    image: "/bikes/jack.webp",
   },
   {
     slug: "king",
@@ -54,7 +54,7 @@ export const models: Model[] = [
     cargo: 2,
     weatherProof: 2,
     reliability: 3,
-    image: "/bikes/king.png",
+    image: "/bikes/king.webp",
   },
   {
     slug: "wild-card",
@@ -67,7 +67,7 @@ export const models: Model[] = [
     cargo: 2,
     weatherProof: 3,
     reliability: 3,
-    image: "/bikes/wild-card.png",
+    image: "/bikes/wild-card.webp",
   },
 ];
 

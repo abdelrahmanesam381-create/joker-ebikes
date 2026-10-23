@@ -8,7 +8,7 @@ import { recommend, type Answers } from "@/lib/recommend";
 import { questions } from "./questions";
 import { Button } from "@/components/ui/Button";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { BikeArt } from "@/components/BikeArt";
+import { ProductPhoto } from "@/components/ProductPhoto";
 import { cn } from "@/lib/cn";
 
 export function Picker() {
@@ -44,7 +44,7 @@ export function Picker() {
         >
           <span className="font-display text-5xl">{cardIndex(m)}</span>
           <div className="text-center">
-            <BikeArt accent="#f4f1ea" className="mx-auto w-4/5" />
+            <ProductPhoto model={m} sizes="(min-width: 768px) 30vw, 80vw" className="border-[3px] border-ink" />
             <p className="mt-3 font-display text-4xl uppercase">{m.name}</p>
           </div>
           <span className="self-end rotate-180 font-display text-5xl">{cardIndex(m)}</span>
