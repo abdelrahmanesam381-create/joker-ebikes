@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* JOKER design tokens: one place to change the whole look */
+@theme {
+  --color-ink: #111111;
+  --color-paper: #f4f1ea;
+  --color-signal: #b6ff00;
+  --color-joker: #7c3aed;
+
+  --shadow-hard: 6px 6px 0 #111111;
+  --shadow-hard-lg: 8px 8px 0 #111111;
+
+  --animate-marquee: marquee 25s linear infinite;
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+/* Fonts come from next/font in layout.tsx, so they reference its CSS variables */
+@theme inline {
+  --font-display: var(--font-archivo), sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+}
